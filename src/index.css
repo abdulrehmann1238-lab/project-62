@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased overflow-x-hidden;
+    background-color: #FAF8F5;
+    color: #1F2421;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B09066;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom utility styles for luxury details */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C5A880 0%, #A38760 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-card {
+  background: #FCFBF9;
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  box-shadow: 0 4px 20px -2px rgba(58, 53, 48, 0.02);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(197, 168, 128, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -4px rgba(197, 168, 128, 0.08);
+}
+
+.glass-panel {
+  background: rgba(252, 251, 249, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.12);
+}
+
+.glass-panel-dark {
+  background: rgba(31, 36, 33, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+/* Hide default scrollbars for simulated app devices */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
